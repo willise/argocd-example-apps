@@ -3,7 +3,8 @@ services:
   testsvc:
     type: webservice
     image: crccheck/hello-world
-    replicas: 2
     port: 8000
     route:
       domain: testsvc.example.com
+    autoscale:
+      min: 2
